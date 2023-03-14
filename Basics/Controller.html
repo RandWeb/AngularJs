@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controller</title>
+</head>
+<script src="../node_modules/angular/angular.js"></script>
+<body>
+    <p>Try to changes the names</p>
+    <div data-ng-app="myApp" data-ng-controller="myController">
+        <label for="firstName">FirstName</label>
+        <input type="text" data-ng-model="firstName" id="firstName">
+        <label for="lastName">LastName</label>
+        <input type="text" data-ng-model="lastName" id="lastName">
+        <br>
+        <p>Full Name : {{firstName + " " + lastName}}</p>
+    </div>
+
+    <script>
+        let app = angular.module('myApp',[]);
+        app.controller('myController',($scope)=>{
+            $scope.firstName = "mehrdad";
+            $scope.lastName = "Tabesh";
+        });
+    </script>
+</body>
+</html>
