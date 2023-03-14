@@ -7,17 +7,17 @@
     <title>Start</title>
   </head>
   <body>
-    <div ng-app="" ng-init="name='mehrdad'">
+    <div data-ng-app="" data-ng-init="name='mehrdad'">
       <p>Input something in the input box:</p>
       <p>
         Name:
-        <input type="text" ng-model="name" placeholder="Enter name here" />
+        <input type="text" data-ng-model="name" placeholder="Enter name here" />
       </p>
       <h2>Hello {{name}}</h2>
 
       <br/> 
       <h1> working with ng-bind</h1>
-      <h2>Hello <p style="display: inline-block;" ng-bind="name"></p></h2>
+      <h2>Hello <p style="display: inline-block;" data-ng-bind="name"></p></h2>
     </div>
 
     <script src="node_modules/angular/angular.js"></script>
